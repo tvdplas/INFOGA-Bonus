@@ -110,7 +110,14 @@ static class Solvers
             for (int i = 0; i < ps.Count; i++)
             {
                 var p = ps[i];
-                if (targetPoint == null && !ReferenceEquals(p, currentPoint)) targetPoint = p;
+
+                if (targetPoint == null && !ReferenceEquals(p, currentPoint))
+                {
+                    targetPoint = p;
+                    targetIndex = i;
+                    continue;
+                }
+
                 if (targetPoint != null && Point.IsLeftOf(currentPoint, targetPoint, p))
                 {
                     targetPoint = p;
