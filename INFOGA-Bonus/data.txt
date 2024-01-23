@@ -1,0 +1,53 @@
+10.000 x 10.000 grid
+50.000 points
+5.000 runs per parameter setting
+
+Uniform
+---- Test case generation ----
+Mean: 0.5586000000000004         StdDev (corrected): 0.0084550284151563
+---- Gift wrap ----
+Mean: 4.980400000000003  StdDev (corrected): 0.014498455401931886
+Mean HP: 28.622800000000016      StdDev (corrected): 0.050697318229025894
+---- Graham scan ----
+Mean: 14.071799999999989         StdDev (corrected): 0.03051417990107231
+Mean HP: 28.622800000000016      StdDev (corrected): 0.050697318229025894
+
+Normal
+---- Test case generation ----
+Mean: 8.778200000000016  StdDev (corrected): 0.014974838936036412
+---- Gift wrap ----
+Mean: 11.724799999999979         StdDev (corrected): 0.11690503132572973
+Mean HP: 69.2073999999999        StdDev (corrected): 0.6969634916333386
+---- Graham scan ----
+Mean: 14.05280000000002  StdDev (corrected): 0.02324716150637797
+Mean HP: 69.2073999999999        StdDev (corrected): 0.6969634916333386
+
+Line (horizontal)
+---- Test case generation ----
+Mean: 2.789799999999989  StdDev (corrected): 0.01558626890425258
+---- Gift wrap ----
+Mean: 1.0955999999999981         StdDev (corrected): 0.006562068282792365
+Mean HP: 2       StdDev (corrected): 0
+---- Graham scan ----
+Mean: 15.373200000000002         StdDev (corrected): 0.04284987251223585
+Mean HP: 2       StdDev (corrected): 0
+
+Circle 
+---- Test case generation ----
+Mean: 1.6278000000000017         StdDev (corrected): 0.015418851455151867
+---- Gift wrap ----
+Mean: 16.448199999999996         StdDev (corrected): 0.023585898560838942
+Mean HP: 98.77959999999982       StdDev (corrected): 0.06901621125129294
+---- Graham scan ----
+Mean: 13.859799999999987         StdDev (corrected): 0.021132868040621595
+Mean HP: 98.77959999999982       StdDev (corrected): 0.06901621125129294
+
+Circle (fixed radius, 200 runs due to time constraints)
+---- Test case generation ----
+Mean: 3.925      StdDev (corrected): 0.2098021920738556
+---- Gift wrap ----
+Mean: 5416.914999999998  StdDev (corrected): 52.61802133987573
+Mean HP: 49467.84999999997       StdDev (corrected): 2.303981151339707
+---- Graham scan ----
+Mean: 21.95500000000002  StdDev (corrected): 0.27475868809451154
+Mean HP: 49467.84999999997       StdDev (corrected): 2.303981151339707

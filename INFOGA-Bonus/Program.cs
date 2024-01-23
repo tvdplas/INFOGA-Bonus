@@ -72,11 +72,11 @@ class Problem
     public List<Edge> convexhull;
 
     private static double MIN_X = 0;
-    private static double MAX_X = 1000;
+    private static double MAX_X = 10000;
     private static double MIN_Y = 0;
-    private static double MAX_Y = 1000;
-    private static int NUM_POINTS = 5_000;
-    private static string DISTRIBUTION = "circle"; // possible values: uniform, normal, circle, circle_fixed
+    private static double MAX_Y = 10000;
+    private static int NUM_POINTS = 50_000;
+    private static string DISTRIBUTION = "line"; // possible values: uniform, normal, circle, circle_fixed
     public Problem()
     {
         points = new(NUM_POINTS);
@@ -107,6 +107,11 @@ class Problem
                 var distance = DISTRIBUTION == "circle" ? rnd.NextDouble() * radius : radius;
                 x = radius + distance * Math.Cos(angle);
                 y = radius + distance * Math.Sin(angle);
+            }
+            else if (DISTRIBUTION == "line")
+            {
+                x = rnd.NextDouble() * (MAX_X - MIN_X) + MIN_X;
+                y = (MAX_Y - MIN_Y) / 2 + MIN_Y;
             }
             points.Add(new(x, y));
         }
@@ -264,7 +269,7 @@ class Program
     {
         Stopwatch sw = new Stopwatch();
 
-        var NUM_RUNS = 1_000;
+        var NUM_RUNS = 5000;
         double[][] times = new double[3][];
         times[0] = new double[NUM_RUNS];
         times[1] = new double[NUM_RUNS];
@@ -274,7 +279,7 @@ class Program
         hullPoints[1] = new double[NUM_RUNS];
         for (int i = 0; i < NUM_RUNS; i++)
         {
-            if (i % 100 == 0)
+            //if (i % 100 == 0)
                 Console.WriteLine($"{i / (NUM_RUNS / 100)}% done");
             // Generate testcase
             sw.Restart();
